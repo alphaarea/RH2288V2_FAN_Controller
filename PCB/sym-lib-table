@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name RH2288_PWM)(type Legacy)(uri ${KIPRJMOD}/RH2288_PWM.lib)(options "")(descr ""))
+)
