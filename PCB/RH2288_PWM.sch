@@ -213,7 +213,7 @@ Wire Wire Line
 	8000 1750 8250 1750
 Text GLabel 6100 3300 2    50   Input ~ 0
 SCK
-Text GLabel 6100 4600 2    50   Input ~ 0
+Text GLabel 6500 4600 2    50   Input ~ 0
 TXD
 Text GLabel 6100 4500 2    50   Input ~ 0
 RXD
@@ -256,20 +256,6 @@ F 3 "~" H 6500 4150 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6500 4300 6100 4300
-$Comp
-L Connector_Generic:Conn_01x01 J1
-U 1 1 5E729BF9
-P 7000 4300
-F 0 "J1" H 7080 4342 50  0000 L CNN
-F 1 "Conn_01x01" H 7080 4251 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 7000 4300 50  0001 C CNN
-F 3 "~" H 7000 4300 50  0001 C CNN
-	1    7000 4300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6800 4300 6500 4300
-Connection ~ 6500 4300
 Text Label 6200 4300 0    50   ~ 0
 RST
 Text GLabel 8000 1850 0    50   Input ~ 0
@@ -302,34 +288,34 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_01x06 J3
 U 1 1 5E72F58C
-P 8450 3500
-F 0 "J3" V 8414 3112 50  0000 R CNN
-F 1 "Conn_FANs" V 8323 3112 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal" H 8450 3500 50  0001 C CNN
-F 3 "~" H 8450 3500 50  0001 C CNN
-	1    8450 3500
+P 8450 3000
+F 0 "J3" V 8414 2612 50  0000 R CNN
+F 1 "Conn_FANs" V 8323 2612 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal" H 8450 3000 50  0001 C CNN
+F 3 "~" H 8450 3000 50  0001 C CNN
+	1    8450 3000
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:GND #PWR0112
 U 1 1 5E730F06
-P 8250 4000
-F 0 "#PWR0112" H 8250 3750 50  0001 C CNN
-F 1 "GND" H 8255 3827 50  0000 C CNN
-F 2 "" H 8250 4000 50  0001 C CNN
-F 3 "" H 8250 4000 50  0001 C CNN
-	1    8250 4000
+P 8250 3500
+F 0 "#PWR0112" H 8250 3250 50  0001 C CNN
+F 1 "GND" H 8255 3327 50  0000 C CNN
+F 2 "" H 8250 3500 50  0001 C CNN
+F 3 "" H 8250 3500 50  0001 C CNN
+	1    8250 3500
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0113
 U 1 1 5E731799
-P 8750 4000
-F 0 "#PWR0113" H 8750 3750 50  0001 C CNN
-F 1 "GND" H 8755 3827 50  0000 C CNN
-F 2 "" H 8750 4000 50  0001 C CNN
-F 3 "" H 8750 4000 50  0001 C CNN
-	1    8750 4000
+P 8750 3500
+F 0 "#PWR0113" H 8750 3250 50  0001 C CNN
+F 1 "GND" H 8755 3327 50  0000 C CNN
+F 2 "" H 8750 3500 50  0001 C CNN
+F 3 "" H 8750 3500 50  0001 C CNN
+	1    8750 3500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -359,9 +345,9 @@ Wire Wire Line
 Wire Wire Line
 	8250 5000 8250 4700
 Wire Wire Line
-	8250 4000 8250 3700
+	8250 3500 8250 3200
 Wire Wire Line
-	8750 3700 8750 4000
+	8750 3200 8750 3500
 $Comp
 L power:+12V #PWR0116
 U 1 1 5E733D46
@@ -376,16 +362,16 @@ $EndComp
 $Comp
 L power:+12V #PWR0117
 U 1 1 5E734C90
-P 8450 4050
-F 0 "#PWR0117" H 8450 3900 50  0001 C CNN
-F 1 "+12V" H 8465 4223 50  0000 C CNN
-F 2 "" H 8450 4050 50  0001 C CNN
-F 3 "" H 8450 4050 50  0001 C CNN
-	1    8450 4050
+P 8450 3550
+F 0 "#PWR0117" H 8450 3400 50  0001 C CNN
+F 1 "+12V" H 8465 3723 50  0000 C CNN
+F 2 "" H 8450 3550 50  0001 C CNN
+F 3 "" H 8450 3550 50  0001 C CNN
+	1    8450 3550
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	8450 4050 8450 3700
+	8450 3550 8450 3200
 Wire Wire Line
 	8450 4700 8450 5000
 $Comp
@@ -399,4 +385,56 @@ F 3 "" H 2500 2000 50  0001 C CNN
 	1    2500 2000
 	1    0    0    -1  
 $EndComp
+Text GLabel 8550 5500 3    50   Input ~ 0
+PWM_IN
+Wire Wire Line
+	8550 5500 8550 4700
+Text GLabel 8350 5500 3    50   Input ~ 0
+PWM_OUT
+Text GLabel 8650 5500 3    50   Input ~ 0
+PWM_OUT
+Wire Wire Line
+	8650 5500 8650 4700
+Wire Wire Line
+	8350 5500 8350 4700
+Text GLabel 8550 4000 3    50   Input ~ 0
+FAN_PWM
+Text GLabel 8000 4000 0    50   Input ~ 0
+FAN_SEN1
+Text GLabel 9000 4000 2    50   Input ~ 0
+FAN_SEN2
+Wire Wire Line
+	8000 4000 8350 4000
+Wire Wire Line
+	8350 4000 8350 3200
+Wire Wire Line
+	8550 3200 8550 4000
+Wire Wire Line
+	8650 3200 8650 4000
+Wire Wire Line
+	8650 4000 9000 4000
+Text GLabel 6100 3000 2    50   Input ~ 0
+FAN_PWM
+Text GLabel 6100 4800 2    50   Input ~ 0
+PWM_OUT
+Text GLabel 6100 3500 2    50   Input ~ 0
+PWM_IN
+Text GLabel 6100 2900 2    50   Input ~ 0
+FAN_SEN2
+Text GLabel 6500 4500 2    50   Input ~ 0
+FAN_SEN1
+Wire Wire Line
+	6500 4600 6400 4600
+Wire Wire Line
+	6500 4500 6400 4500
+Wire Wire Line
+	6400 4500 6400 4600
+Connection ~ 6400 4600
+Wire Wire Line
+	6400 4600 6100 4600
+Text GLabel 7000 4300 2    50   Input ~ 0
+RST
+Wire Wire Line
+	7000 4300 6500 4300
+Connection ~ 6500 4300
 $EndSCHEMATC
